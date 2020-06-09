@@ -31,8 +31,8 @@ int main() {
 	int cz = Charsize(arr, max_size);
 	int alp_count[26] = { 0 };
 	for (int i = 0; i < cz; i++) {
-		if (arr[i] < 97) alp_count[arr[i] - 65]++; //�빮��
-		else alp_count[arr[i] - 97]++; //�ҹ���
+		if (arr[i] < 97) alp_count[arr[i] - 65]++; //´ë¹®ÀÚ
+		else alp_count[arr[i] - 97]++; //¼Ò¹®ÀÚ
 	}
 
 	int alp_count2[26];
