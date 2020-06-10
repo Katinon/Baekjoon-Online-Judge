@@ -7,7 +7,7 @@ int main() {
 
     int num;
     cin >> num;
-    for (int i = num; i > 0; i--) {
+    for (int i = 1; i <= num; i++) {
         cout << i << "\n";
     }
 }

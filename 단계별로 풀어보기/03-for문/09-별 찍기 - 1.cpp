@@ -5,10 +5,12 @@ int main() {
     cin.tie(NULL);
     ios::sync_with_stdio(false);
 
-    int num, a, b;
+    int num;
     cin >> num;
     for (int i = 1; i <= num; i++) {
-        cin >> a >> b;
-        cout << "Case #" << i << ": " << a + b << "\n";
+        for (int j = 0; j < i; j++) {
+            cout << "*";
+        }
+        cout << "\n";
     }
 }

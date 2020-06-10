@@ -7,9 +7,8 @@ int main() {
 
     int num, a, b;
     cin >> num;
-    while (num) {
+    for (int i = 1; i <= num; i++) {
         cin >> a >> b;
-        cout << a + b << "\n";
-        num--;
+        cout << "Case #" << i << ": " << a + b << "\n";
     }
 }

@@ -5,9 +5,11 @@ int main() {
     cin.tie(NULL);
     ios::sync_with_stdio(false);
 
-    int num;
+    int num, a, b;
     cin >> num;
-    for (int i = 1; i <= num; i++) {
-        cout << i << "\n";
+    while (num) {
+        cin >> a >> b;
+        cout << a + b << "\n";
+        num--;
     }
 }
