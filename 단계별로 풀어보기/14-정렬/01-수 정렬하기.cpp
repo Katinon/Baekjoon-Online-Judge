@@ -1,4 +1,5 @@
-﻿#include <iostream>
+//거품정렬(BubbleSort)
+#include <iostream>
 using namespace std;
 
 int main() {
