@@ -7,7 +7,7 @@ void Swap(int* a, int* b) {
 	*b = temp;
 }
 
-void SelectionSort(int a[], int cnt) {
+void BubbleSort(int a[], int cnt) {
 	for (int i = 0; i < cnt - 1; i++) {
 		for (int j = 0; j < cnt - 1 - i; j++) 
 			if (a[j] < a[j + 1]) Swap(&a[j], &a[j + 1]);
@@ -24,6 +24,6 @@ int main() {
 		temp /= 10;
 		if (temp == 0) break;
 	}
-	SelectionSort(arr, cnt);
+	BubbleSort(arr, cnt);
 	for (int i = 0; i < cnt; i++) cout << arr[i];
 }
