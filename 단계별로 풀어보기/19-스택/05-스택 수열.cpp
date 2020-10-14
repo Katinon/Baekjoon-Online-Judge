@@ -1,47 +1,35 @@
-//TIME OUT//
 #include <iostream>
+#include <stack>
 #include <vector>
 using namespace std;
-vector <int> vec_ori, vec;
-vector <char> c;
+
+vector<int> v;
+vector<char> c;
+stack<int> s;
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-	cout.tie(NULL);
 	int N; cin >> N;
 	for (int i = 0; i < N; i++) {
-		int tmp;
-		cin >> tmp;
-		vec_ori.push_back(tmp);
+		int tmp; cin >> tmp;
+		v.push_back(tmp);
 	}
-	int pt = 0, i = 1;
-	while (i <= N) {
-		int tmp = i;
-		if (vec_ori[pt] >= i) {
-			vec.push_back(i);
-			c.push_back('+');
-			i++;
-		}
-		
-		while (vec_ori[pt] == tmp) {
-			vec.pop_back();
-			c.push_back('-');
-			pt++, tmp--;
-			if (pt >= N) break;
+	vector<int>::iterator it;
+	it = v.begin();
+	for (int i = 1; i <= N; i++) {
+		s.push(i);
+		c.push_back('+');
+		while (s.empty() == 0) {
+			if (*it != s.top()) break;
+			else {
+				c.push_back('-');
+				s.pop();
+				++it;
+			}
 		}
 	}
-	for (int k = vec.size() - 1; k >= 0; k--) {
-		if (vec[k] == vec_ori[pt]) {
-			vec.pop_back();
-			c.push_back('-');
-			pt++;
-		}
-		else break;
-	}
-	if (vec.size() == 0) {
-		for (int j = 0; j < c.size(); j++) {
-			cout << c[j] << "\n";
+	if (s.empty()) {
+		for (int i = 0; i < c.size(); i++) {
+			cout << c[i] << "\n";
 		}
 	}
 	else cout << "NO";
